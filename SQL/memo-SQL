@@ -1,0 +1,18 @@
+
+INSERT INTO contributor( contributor_firstname, contributor_lastname, contributor_promo, contributor_git) VALUES ('Mourad','El Bouaananii','Cycorp','https://github.com/Mourad-seven');
+
+SELECT promo_id FROM promo WHERE promo_name = 'Cycorp';
+
+
+INSERT INTO octocat( octocat_firstname, octocat_lastname, octocat_phrase, octocat_promo_id)
+VALUES ('Mourad','El Bouaananii','Je suis un octocat',1);
+
+
+ UPDATE octocat  SET octocat_phrase = 'Je fais du SQL!!!' WHERE octocat_firstname = 'Mourad';
+
+SELECT * FROM octocat
+INNER JOIN promo ON promo_id = octocat_promo_id
+WHERE octocat_firstname = 'Mourad';
+
+DELETE FROM octocat
+WHERE octocat_firstname = 'Mourad';
