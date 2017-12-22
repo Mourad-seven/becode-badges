@@ -1,18 +1,30 @@
+--EXO_2
 
-INSERT INTO contributor( contributor_firstname, contributor_lastname, contributor_promo, contributor_git) VALUES ('Mourad','El Bouaananii','Cycorp','https://github.com/Mourad-seven');
+INSERT INTO contributor( contributor_firstname, contributor_lastname, contributor_promo, contributor_git) 
+VALUES ('Mourad','El Bouaananii','Cycorp','https://github.com/Mourad-seven');
 
-SELECT promo_id FROM promo WHERE promo_name = 'Cycorp';
+--EXO_3
 
+SELECT promo_id FROM promo 
+WHERE promo_name = 'Cycorp';
+
+--EXO_4
 
 INSERT INTO octocat( octocat_firstname, octocat_lastname, octocat_phrase, octocat_promo_id)
 VALUES ('Mourad','El Bouaananii','Je suis un octocat',1);
 
+--EXO_5
 
- UPDATE octocat  SET octocat_phrase = 'Je fais du SQL!!!' WHERE octocat_firstname = 'Mourad';
+ UPDATE octocat  SET octocat_phrase = 'Je fais du SQL!!!' 
+WHERE octocat_firstname = 'Mourad';
+
+--EXO_6
 
 SELECT * FROM octocat
 INNER JOIN promo ON promo_id = octocat_promo_id
 WHERE octocat_firstname = 'Mourad';
+
+--EXO_7
 
 DELETE FROM octocat
 WHERE octocat_firstname = 'Mourad';
